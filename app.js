@@ -29,4 +29,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
   res.json({ id: session.id });
 });
 
-const port = (process.env.PORT || 8000, "0.0.0.0");
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  console.log("server is started");
+});
